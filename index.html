@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Portafolio profesional de Laura Rocío Melo Alarcón: educación, trabajo social, políticas públicas, investigación y bosques urbanos.">
+<title>Laura Rocío Melo Alarcón | Portafolio</title>
+<style>
+:root{--bg:#0b1020;--panel:#121a2d;--panel2:#172238;--text:#edf2f7;--muted:#aab7cb;--accent:#72e0c1;--accent2:#a9a3ff;--line:#29364e}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at 85% 5%,#1d2b49 0,transparent 28%),var(--bg);color:var(--text);font:16px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+header{position:sticky;top:0;z-index:10;background:rgba(11,16,32,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{max-width:1180px;margin:auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-weight:800;letter-spacing:.02em;color:var(--text)}.brand span{color:var(--accent)}
+nav{display:flex;gap:16px;flex-wrap:wrap;justify-content:flex-end}nav a{font-size:.88rem;color:var(--muted)}nav a:hover,nav a.active{color:var(--accent)}
+main{max-width:1120px;margin:auto;padding:0 24px}
+.hero{min-height:76vh;display:grid;grid-template-columns:1.25fr .75fr;align-items:center;gap:48px;padding:76px 0 56px}
+.eyebrow{color:var(--accent);text-transform:uppercase;letter-spacing:.16em;font-size:.78rem;font-weight:800}
+h1{font-size:clamp(2.7rem,6vw,5.6rem);line-height:1.02;letter-spacing:-.055em;margin:16px 0 24px}
+h1 em{font-style:normal;color:var(--accent)}
+.lead{font-size:1.15rem;color:var(--muted);max-width:690px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:12px;font-weight:750;border:1px solid var(--line);background:var(--panel);color:var(--text);transition:.2s}
+.btn.primary{background:var(--accent);color:#07131b;border-color:var(--accent)}.btn:hover{transform:translateY(-2px);text-decoration:none}
+.profile-card{padding:28px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(145deg,rgba(114,224,193,.12),rgba(169,163,255,.07)),var(--panel);box-shadow:0 24px 80px #0003}
+.orbit{width:100%;aspect-ratio:1;border-radius:50%;border:1px solid #49647b;display:grid;place-items:center;position:relative;background:radial-gradient(circle,#263a50 0,#152338 50%,#10182a 72%)}
+.orbit:before,.orbit:after{content:"";position:absolute;border:1px solid #49647b;border-radius:50%;inset:13%}
+.orbit:after{inset:28%;border-color:#72e0c180}
+.orbit-core{position:relative;text-align:center;z-index:1;padding:15px}.orbit-core strong{display:block;font-size:1.35rem}.orbit-core small{color:var(--muted)}
+.orbit-tag{position:absolute;background:#202d43;border:1px solid #40536d;border-radius:100px;padding:7px 11px;font-size:.78rem;color:var(--text)}
+.tag1{top:9%;left:8%}.tag2{right:0;top:38%}.tag3{bottom:12%;left:10%}.tag4{bottom:22%;right:8%}
+section{padding:76px 0;border-top:1px solid var(--line);scroll-margin-top:78px}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:28px}
+h2{font-size:clamp(2rem,4vw,3rem);line-height:1.1;letter-spacing:-.04em;margin:8px 0}
+.section-intro{color:var(--muted);max-width:650px;margin:0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px;transition:transform .22s,border-color .22s}
+.card:hover{transform:translateY(-4px);border-color:#638b9b}
+.card h3{margin:0 0 8px;font-size:1.08rem}.card p{margin:0;color:var(--muted)}.card .meta{font-size:.78rem;color:var(--accent);font-weight:800;letter-spacing:.04em;margin-bottom:9px;text-transform:uppercase}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.pill{font-size:.82rem;color:#d9e3f2;background:#1c2940;border:1px solid #30425f;padding:6px 10px;border-radius:100px}
+.timeline{display:grid;gap:14px}.timeline-item{display:grid;grid-template-columns:170px 1fr;gap:24px;padding:22px;border:1px solid var(--line);border-radius:16px;background:var(--panel)}
+.date{color:var(--accent);font-weight:800;font-size:.88rem}.timeline-item h3{margin:0 0 5px}.timeline-item p{margin:0;color:var(--muted)}
+.product-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.product-links a{border:1px solid #3a4b68;border-radius:12px;padding:10px 13px;background:#172238}
+.contact-box{display:grid;grid-template-columns:1fr 1fr;gap:26px;padding:30px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(120deg,#14253a,#121a2d)}
+.contact-box p{color:var(--muted)}.contact-list{display:grid;gap:12px;align-content:center}
+footer{max-width:1120px;margin:auto;padding:28px 24px 40px;color:#8796ad;font-size:.85rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .65s,transform .65s}.reveal.visible{opacity:1;transform:none}
+@media(max-width:850px){.hero{grid-template-columns:1fr;min-height:auto;padding-top:55px}.profile-card{max-width:440px}.grid{grid-template-columns:repeat(2,1fr)}.nav{align-items:flex-start;flex-direction:column}nav{justify-content:flex-start}}
+@media(max-width:560px){main{padding:0 18px}.grid{grid-template-columns:1fr}.timeline-item{grid-template-columns:1fr;gap:5px}.contact-box{grid-template-columns:1fr}section{padding:56px 0}.nav{padding:12px 18px}nav{gap:10px}nav a{font-size:.8rem}}
+</style>
+</head>
+<body>
+<header><div class="nav"><a class="brand" href="#inicio">LAURA <span>MELO</span></a><nav aria-label="Navegación principal">
+<a href="#quien-soy">Quién soy</a><a href="#logros">Logros</a><a href="#academia">Academia</a><a href="#hobbies">Hobbies</a><a href="#experiencias">Experiencias laborales</a><a href="#productos">Productos</a><a href="#contacto">Contacto</a>
+</nav></div></header>
+<main>
+<section class="hero" id="inicio" style="border:0">
+<div class="reveal visible"><div class="eyebrow">Educación · Investigación · Transformación social</div>
+<h1>Ideas que conectan<br><em>personas y territorios.</em></h1>
+<p class="lead">Soy Laura Rocío Melo Alarcón, magíster en Educación, trabajadora social y especialista en Análisis de Políticas Públicas. Mi trabajo cruza educación, justicia restaurativa, participación, interculturalidad y acción socioambiental.</p>
+<div class="actions"><a class="btn primary" href="#experiencias">Explorar trayectoria ↘</a><a class="btn" href="#contacto">Conversemos</a></div>
+<div class="pills"><span class="pill">Docencia</span><span class="pill">Investigación cualitativa</span><span class="pill">Políticas públicas</span><span class="pill">Bosques urbanos</span></div></div>
+<div class="profile-card reveal"><div class="orbit"><span class="orbit-tag tag1">Educación</span><span class="orbit-tag tag2">Territorio</span><span class="orbit-tag tag3">Cuidado</span><span class="orbit-tag tag4">Participación</span><div class="orbit-core"><strong>Laura Rocío<br>Melo Alarcón</strong><small>Conocimiento situado<br>y acción colectiva</small></div></div></div>
+</section>
+<section id="quien-soy"><div class="section-head"><div><div class="eyebrow">01 / Perfil</div><h2>Quién soy</h2></div></div>
+<p class="section-intro">Una profesional interdisciplinaria comprometida con procesos educativos, sociales y comunitarios. Integro la reflexión crítica, la investigación y el diseño de experiencias de aprendizaje para contribuir a una convivencia más justa y participativa.</p>
+<div class="grid" style="margin-top:24px"><article class="card"><div class="meta">Mi enfoque</div><h3>Aprender haciendo</h3><p>Diseño de experiencias pedagógicas, metodologías activas y recursos digitales que conectan conocimientos con problemas reales.</p></article><article class="card"><div class="meta">Mi compromiso</div><h3>Participación y cuidado</h3><p>Trabajo con ciudadanía, juventudes, diálogo intercultural, justicia restaurativa y construcción de paz.</p></article><article class="card"><div class="meta">Mi horizonte</div><h3>Territorios vivos</h3><p>Investigación-acción y fortalecimiento de liderazgos socioambientales alrededor de los bosques urbanos.</p></article></div></section>
+<section id="logros"><div class="section-head"><div><div class="eyebrow">02 / Aportes destacados</div><h2>Logros</h2></div></div>
+<div class="grid"><article class="card"><div class="meta">Investigación y territorio</div><h3>Proceso Entrebosques</h3><p>Participación en un proceso de investigación-acción colectiva para fortalecer coliderazgos socioambientales y bosques urbanos en Bogotá.</p></article><article class="card"><div class="meta">Innovación social</div><h3>Emprendimiento con propósito</h3><p>Ganadora de incentivo por innovación en emprendimiento en el programa Mujer Emprendedora de OEI–SDE.</p></article><article class="card"><div class="meta">Incidencia pública</div><h3>Diálogo sobre crisis climática</h3><p>Participación en espacios públicos y ponencias sobre bosques urbanos, cambio climático, crisis del agua y contextos urbanos.</p></article><article class="card"><div class="meta">Justicia y educación</div><h3>Diseño de módulo SRPA y justicia restaurativa</h3><p>Diseño de módulo a distancia sobre el Sistema de Responsabilidad Penal para Adolescentes y justicia restaurativa.</p><div class="product-links"><a href="https://youtu.be/crWEPUoP57s" target="_blank" rel="noopener">Ver módulo ↗</a></div></article><article class="card"><div class="meta">Publicaciones</div><h3>Producción académica</h3><p>Artículos, reseñas, ponencias y trabajos sobre educación, juventud, territorio, políticas públicas e intervención social.</p></article><article class="card"><div class="meta">Mediación</div><h3>Conciliación en equidad</h3><p>Formación como conciliadora en equidad, con diplomado realizado en 2024.</p></article></div></section>
+<section id="academia"><div class="section-head"><div><div class="eyebrow">03 / Formación y pensamiento</div><h2>Academia</h2></div></div>
+<div class="grid"><article class="card"><div class="meta">2020–2023</div><h3>Maestría en Educación</h3><p>Universidad Nacional de Colombia.</p></article><article class="card"><div class="meta">2008</div><h3>Especialización en Análisis de Políticas Públicas</h3><p>Universidad Nacional de Colombia.</p></article><article class="card"><div class="meta">2019</div><h3>Licenciatura en Ciencias Humanas y Sociales</h3><p>Universidad de Lyon 2 Lumière, mención en educación.</p></article><article class="card"><div class="meta">2002–2007</div><h3>Trabajo Social</h3><p>Universidad Nacional de Colombia; profundización en trabajo comunitario e intervención social.</p></article><article class="card"><div class="meta">Investigación</div><h3>Autobiografías audiovisuales</h3><p>Tesis de maestría sobre trayectorias de vida de adolescentes y jóvenes privados de la libertad.</p><div class="product-links"><a href="https://repositorio.unal.edu.co/handle/unal/84038" target="_blank" rel="noopener">Consultar tesis ↗</a></div></article><article class="card"><div class="meta">Redes académicas</div><h3>Diálogos interculturales</h3><p>Participación en grupo de trabajo de CLACSO sobre diálogos interculturales para una convivencia pacífica (2023–2026, según CV).</p><div class="product-links"><a href="https://dialogointercultural.co/ge/" target="_blank" rel="noopener">Conocer el grupo ↗</a></div></article></div>
+<p class="section-intro" style="margin-top:24px">Áreas de interés: educación y paz, políticas públicas, justicia restaurativa, procesos juveniles, investigación cualitativa, interculturalidad y ecologías urbanas.</p></section>
+<section id="hobbies"><div class="section-head"><div><div class="eyebrow">04 / Fuera del escritorio</div><h2>Hobbies e intereses</h2></div></div>
+<p class="section-intro">El CV no detalla pasatiempos personales. Para no atribuirte intereses que no has confirmado, esta sección presenta temas que sí atraviesan tu trabajo y que puedes editar según quieras mostrar una dimensión más personal.</p>
+<div class="grid" style="margin-top:24px"><article class="card"><h3>🌿 Naturaleza y bosques urbanos</h3><p>Explorar las relaciones entre comunidad, cuidado y territorio.</p></article><article class="card"><h3>🎬 Narrativas audiovisuales</h3><p>Experimentar con relatos, autobiografías y formatos transmedia.</p></article><article class="card"><h3>📚 Lectura y diálogo</h3><p>Conversaciones interdisciplinarias sobre educación, sociedad y cultura.</p></article></div></section>
+<section id="experiencias"><div class="section-head"><div><div class="eyebrow">05 / Trayectoria</div><h2>Experiencias laborales</h2></div></div>
+<div class="timeline">
+<div class="timeline-item"><div class="date">Mar. 2023–2026 · ocasional</div><div><h3>Profesora ocasional MT · UNAD</h3><p>Ética y ciudadanía e inclusión social; ética del cuidado y democracia participativa. Líder del semillero de investigación Entre voz ¿Qué? Bosques urbanos.</p></div></div>
+<div class="timeline-item"><div class="date">Abr.–jul. 2023</div><div><h3>Profesora de inmersión universitaria · EAN / Secretaría de Educación</h3><p>Cuarta revolución industrial, metodología transmedia, medios digitales, ideación y diseño de proyectos, competencias del siglo XXI.</p></div></div>
+<div class="timeline-item"><div class="date">Ago.–nov. 2022</div><div><h3>Diseño de módulo · Universidad Nacional de Colombia</h3><p>Cátedra UNESCO Intercultural: género, generación y etnicidad. Diseño de módulo de justicia restaurativa en modalidad a distancia.</p></div></div>
+<div class="timeline-item"><div class="date">Mar.–jul. 2022</div><div><h3>Docente auxiliar · Universidad Nacional de Colombia</h3><p>Diseño y desarrollo de clase de Ciencia Política para Trabajo Social, seguimiento y evaluación del estudiantado.</p></div></div>
+<div class="timeline-item"><div class="date">Sep.–dic. 2021</div><div><h3>Profesora universitaria · UNIMINUTO</h3><p>Políticas públicas, proyectos de desarrollo e historia del Trabajo Social; seguimiento de practicantes en organizaciones e instituciones.</p></div></div>
+<div class="timeline-item"><div class="date">2020</div><div><h3>Investigadora social · SEI y USAID</h3><p>Codificación de información cualitativa para el monitoreo y seguimiento de objetivos de un proyecto sobre alianzas comerciales en Colombia.</p></div></div>
+<div class="timeline-item"><div class="date">2018–2020</div><div><h3>Investigadora sociopedagógica · Secretaría de Seguridad, Convivencia y Justicia de Bogotá</h3><p>Acompañamiento a equipos de intervención social y construcción de un modelo sociopedagógico para adolescentes y jóvenes en conflicto con la ley penal.</p></div></div>
+<div class="timeline-item"><div class="date">2013–2018</div><div><h3>Experiencias en educación e intervención social</h3><p>Roles en bienestar universitario, convivencia escolar, educación y trabajo social con entidades públicas, instituciones educativas y organizaciones.</p></div></div>
+<div class="timeline-item"><div class="date">2007–2013</div><div><h3>Trabajo social y experiencia intercultural</h3><p>Intervención social, derechos humanos, seguridad alimentaria, trabajo comunitario y experiencia au pair en París, Francia.</p></div></div>
+</div></section>
+<section id="productos"><div class="section-head"><div><div class="eyebrow">06 / Recursos y publicaciones</div><h2>Productos</h2></div></div>
+<div class="grid"><article class="card"><div class="meta">Recurso interactivo</div><h3>Escape Room · 4.ª Revolución Industrial</h3><p>Recurso digital creado en el contexto de EAN, conectado con Objetivos de Desarrollo Sostenible.</p><div class="product-links"><a href="https://view.genial.ly/6425e997510c3f00184f912b/interactive-content-escape-game-4ta-revolucion-industrial" target="_blank" rel="noopener">Explorar recurso ↗</a></div></article>
+<article class="card"><div class="meta">Recurso interactivo</div><h3>Escape Room · Pareja y familia</h3><p>Experiencia de gamificación para diplomado de UNIMINUTO.</p><div class="product-links"><a href="https://view.genial.ly/613a141fc747b70d1f9d531e/interactive-content-escape-room-museo" target="_blank" rel="noopener">Explorar recurso ↗</a></div></article>
+<article class="card"><div class="meta">Narrativas</div><h3>Autobiografías audiovisuales</h3><p>Trabajo con adolescentes y jóvenes privados de la libertad, a través de narrativas audiovisuales.</p><div class="product-links"><a href="https://padlet.com/lrmeloa/bmrt3rkr3562a6om" target="_blank" rel="noopener">Ver proyecto ↗</a></div></article>
+<article class="card"><div class="meta">Tesis</div><h3>Del conocimiento de otros al aprendizaje de sí</h3><p>Tesis de maestría sobre autobiografías audiovisuales y trayectorias de vida.</p><div class="product-links"><a href="https://repositorio.unal.edu.co/handle/unal/84038" target="_blank" rel="noopener">Leer en repositorio ↗</a></div></article>
+<article class="card"><div class="meta">Artículo · 2023</div><h3>Contrahegemonías ecosocioeducativas</h3><p>Reflexión sobre recreación, desarrollo sostenible y tensiones con el modelo de desarrollo corporativo en Bogotá.</p></article>
+<article class="card"><div class="meta">Artículo · 2021</div><h3>“Vandalismo: de la estigmatización a la judicialización”</h3><p>Publicación en UN Periódico, Universidad Nacional de Colombia.</p></article>
+<article class="card"><div class="meta">Ponencia · 2024</div><h3>Cambio climático y crisis del agua en Colombia</h3><p>Participación en audiencia pública sobre impactos en contextos urbanos.</p><div class="product-links"><a href="https://view.genially.com/663bd221797bf400147bace2/presentation-audiencia-publica" target="_blank" rel="noopener">Ver presentación ↗</a></div></article>
+<article class="card"><div class="meta">Investigación colectiva</div><h3>Entrebosques urbanos</h3><p>Proceso de investigación-acción para fortalecer coliderazgos socioambientales y sistematizar experiencias participativas.</p><div class="product-links"><a href="https://docs.google.com/document/d/1byRocBLvbFIqZLIN9N6B4HruIQFVfS6C/edit" target="_blank" rel="noopener">Consultar documento ↗</a></div></article>
+<article class="card"><div class="meta">Emprendimiento social</div><h3>Tu receta quiche · Artesanidad</h3><p>Iniciativa de emprendimiento social referenciada en el CV.</p><div class="product-links"><a href="https://www.instagram.com/Tu.receta.quiche.Artesanidad/" target="_blank" rel="noopener">Instagram ↗</a></div></article></div></section>
+<section id="contacto"><div class="section-head"><div><div class="eyebrow">07 / Contacto</div><h2>Construyamos algo en común</h2></div></div>
+<div class="contact-box"><div><h3>¿Hablamos?</h3><p>Estoy abierta a conversaciones sobre docencia, investigación, diseño pedagógico, políticas públicas, participación social y proyectos socioambientales.</p><a class="btn primary" href="mailto:lrmeloa@unal.edu.co?subject=Contacto%20profesional">Escribir un correo ↗</a></div><div class="contact-list"><div><strong>Correo</strong><br><a href="mailto:lrmeloa@unal.edu.co">lrmeloa@unal.edu.co</a></div><div><strong>LinkedIn</strong><br><a href="https://www.linkedin.com/in/laura-roc%C3%ADo-melo-alarc%C3%B3n-903a6b150" target="_blank" rel="noopener">Ver perfil profesional ↗</a></div><div><strong>Certificados laborales</strong><br><a href="https://bit.ly/3GGE4sf" target="_blank" rel="noopener">Consultar certificados ↗</a></div></div></div></section>
+</main>
+<footer><span>© <span id="year"></span> Laura Rocío Melo Alarcón · Portafolio profesional</span><a href="#inicio">Volver arriba ↑</a></footer>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal:not(.visible), .card, .timeline-item').forEach(el=>{el.classList.add('reveal');observer.observe(el)});
+const sections=[...document.querySelectorAll('main section[id]')], links=[...document.querySelectorAll('nav a')];
+window.addEventListener('scroll',()=>{let current=sections.filter(s=>s.getBoundingClientRect().top<150).pop();links.forEach(a=>a.classList.toggle('active',current&&a.getAttribute('href')==='#'+current.id))},{passive:true});
+</script>
+</body></html>
